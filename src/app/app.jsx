@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { copyToClipboard } from '../copy-to-clipboard';
 import './app.scss';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
         this.formatEntry = this.formatEntry.bind(this);
         this.setState({
             entryText: 'Loading...',
-            copied: true
+            copied: false
         });
     }
 
@@ -18,7 +19,10 @@ class App extends Component {
                 tabs[0].id,
                 {action: "get-changelog-info"},
                 (response) => {
-                    this.setState({entryText: this.formatEntry(response)})
+                    const entryText = this.formatEntry(response);
+                    this.setState({entryText})
+                    copyToClipboard(entryText);
+                    this.setState({copied: true})
                 }
             );
         });

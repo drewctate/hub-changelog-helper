@@ -1,10 +1,24 @@
 {
-  "name": "Chrome Extension with Preact and Webpack",
+  "name": "Hub Changelog Helper",
   "description": "",
   "version": "0.0.0.1",
-  "browser_action": {
-    "default_title": "My Chrome Extension",
+  "page_action": {
+    "default_title": "Generate changelog entry",
     "default_popup": "popup.html"
   },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.tpondemand.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions" : [
+    "declarativeContent",
+    "tabs"
+  ],
   "manifest_version": 2
 }

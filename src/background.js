@@ -1,3 +1,5 @@
+import { SELECTORS } from './selectors';
+
 // When the extension is installed or upgraded ...
 chrome.runtime.onInstalled.addListener(function() {
   // Replace all rules ...
@@ -9,6 +11,7 @@ chrome.runtime.onInstalled.addListener(function() {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { hostContains: '.tpondemand.com' },
+            css: [SELECTORS.LINK_BTN]
           })
         ],
         // And shows the extension's page action.

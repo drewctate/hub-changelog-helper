@@ -29,7 +29,9 @@ class App extends Component {
     }
 
     formatEntry ({linkHref, title}) {
-        return `- ${title} [12345](${linkHref})`;
+        const parsed = /entity\/([0-9]+)\-/.exec(linkHref);
+        const entityNumber = parsed[1];
+        return `- ${title} [${entityNumber}](${linkHref})`;
     }
 
     render(_, state) {

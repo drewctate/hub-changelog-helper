@@ -1,16 +1,33 @@
 #app-root {
-    width: 400px;
-    height: 75px;
+    width: 600px;
+    height: 95px;
     padding: 2px;
     background-color: #56A5D8;
 
     p {
         background-color: #f8f8f8;
         padding: 5px;
+        margin: 6px;
 
         .highlight {
-            color: white;
-            background-color: #E8912E;
+            color: rgb(50, 50, 50);
+            background-color: #EFE397;
+            font-size: 16px;
+        }
+    }
+
+    .copied-confirmation {
+        color: white;
+        font-size: 12px;
+        text-align: right;
+        padding-right: 8px;
+
+        svg {
+            height: 10px;
+            width: 10px;
+            margin-right: 3px;
+            margin-bottom: -1px;
+            fill: white;
         }
     }
 }

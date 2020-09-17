@@ -1,7 +1,7 @@
 {
-  "name": "Hub Changelog Helper",
+  "name": "Targetprocess Changelog Helper",
   "description": "",
-  "version": "0.0.0.1",
+  "version": "0.0.0.3",
   "page_action": {
     "default_title": "Generate changelog entry",
     "default_popup": "popup.html"

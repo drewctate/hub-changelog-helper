@@ -1,7 +1,7 @@
 {
-  "name": "preact-chrome-extension",
-  "version": "1.0.0",
-  "description": "Scaffolding for a Chrome extension built with [Preact](https://preactjs.com).",
+  "name": "targetprocess-changelog-helper",
+  "version": "1.0.1",
+  "description": "Generates changelog entries from Targetprocess.",
   "main": "index.js",
   "scripts": {
     "build": "webpack && npm run copy:dist",
@@ -26,13 +26,5 @@
   },
   "dependencies": {
     "preact": "^8.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drewctate/preact-chrome-extension-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/drewctate/preact-chrome-extension-starter/issues"
-  },
-  "homepage": "https://github.com/drewctate/preact-chrome-extension-starter#readme"
+  }
 }
